@@ -18,3 +18,5 @@ alias ls='ls -la'
 alias gb='git branch'
 alias gs='git status'
 alias gl='git log'
+
+PATH=$PATH:$HOME/tmp/rvm/bin # Add RVM to PATH for scripting

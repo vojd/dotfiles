@@ -1,2 +1,4 @@
+# install these for use with Emacs
 epc
 jedi
+flake8

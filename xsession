@@ -33,3 +33,5 @@ fi
 eval `ssh-agent`
 ssh-add
 exec xmonad
+
+devmon &

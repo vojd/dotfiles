@@ -1,16 +1,19 @@
+module Main (main) where
 import XMonad
 import XMonad.Config.Gnome
 import XMonad.Util.NamedActions
 import XMonad.Util.EZConfig
+import XMonad.Util.Replace (replace)
+import XMonad.Config.Vojd
 import XMonad.Hooks.SetWMName
+import Control.Monad (when)
+import System.Environment (getArgs)
 
-main = xmonad $ addDescrKeys ((mod4Mask, xK_F1), xMessage) myKeys $ gnomeConfig { terminal = "urxvt"
-                  , modMask = mod4Mask
-                  , normalBorderColor = "#00afee"
-                  , focusedBorderColor = "#ff0808"
-                  , startupHook = setWMName "LG3D"
-                  , focusFollowsMouse = False
-                  }
-
-myKeys c = (subtitle "Custom Keys":) $ mkNamedKeymap c $
-       [("M-o", addName "dmenu" $ spawn "dmenu_run")]
+main :: IO ()
+main = xmonad $ vojdConfig
+{-
+     args <- getArgs
+     when ("--replace" `elem` args) replace
+     -- xmonad =<< vojdConfig
+     xmonad = vojdConfig
+-}

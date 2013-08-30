@@ -18,7 +18,8 @@ alias ls='ls -la'
 alias gb='git branch'
 alias gs='git status'
 alias gl='git log'
-
+alias supr='sudo supervisorctl -c /etc/supervisor/supervisord.conf'
+alias e='emacs &'
 PATH=$PATH:$HOME/tmp/rvm/bin # Add RVM to PATH for scripting
 
 PATH=$PATH:$HOME/opt/rvm/bin # Add RVM to PATH for scripting

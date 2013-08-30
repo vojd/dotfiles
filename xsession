@@ -30,6 +30,7 @@ fi
     ) &
 fi
 
+xloadimage -onroot -fullscreen /home/vojd/Bilder/yfFUD.jpg
 eval `ssh-agent`
 ssh-add
 exec xmonad
